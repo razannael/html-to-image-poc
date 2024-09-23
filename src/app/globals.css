@@ -30,13 +30,66 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* global.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.text-area-container{
+  width: 65%;
+}
+.preview-container {
+  width: 20%;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+.preview {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%; /* Fill the width of the parent */
+  height: 100%; /* Fill the height of the parent */
+  max-width: 90%; /* Ensure it doesn't exceed 30% of the parent's width */
+  max-height: 20%; /* Ensure it doesn't exceed 50% of the parent's height */
+  object-fit: fill !important;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+.output-images {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+
+}
+
+.output-images img {
+  width: 100px;  
+  height: 100%;
+  object-fit: cover; 
+  border: 1px solid #ddd;
 }
